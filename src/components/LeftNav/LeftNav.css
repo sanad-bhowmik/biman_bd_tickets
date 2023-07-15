@@ -1,0 +1,64 @@
+.container {
+    text-align: center;
+  }
+  
+  .stepper-wrapper {
+    /* margin: 50px auto; */
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    gap: 40px;
+  }
+  
+  .stepper-wrapper::before {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: #d2d2d2; /* Updated color */
+    position: absolute;
+    z-index: -2;
+  }
+  
+  .progress {
+    content: "";
+    width: 0%;
+    height: 3px;
+    background-color: rgb(78, 196, 243);
+    position: absolute;
+    z-index: -1;
+    transition: width 1s;
+  }
+  
+  .screen-indicator {
+    border-radius: 50%;
+    border: 3px solid ; /* Updated color */
+    background-color: #d2d2d2;
+    padding: 5px 5px;
+    color: #d2d2d2;
+    transition: border-color color;
+    transition-duration: 0.7s;
+  }
+  
+  .completed {
+   background-color: rgb(0, 223, 162);
+    color: rgb(0, 223, 162);
+  }
+  
+  .control-btn {
+    background-color: rgb(238, 238, 238);
+    padding: 5px 10px;
+    border: 1px solid rgb(0, 223, 162);
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .control-btn:disabled {
+    cursor: not-allowed;
+  }
+  
+  .control-btn:not(:disabled):hover {
+    background-color: lightgray;
+  }
+  

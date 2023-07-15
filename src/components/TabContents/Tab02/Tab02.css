@@ -1,0 +1,20 @@
+.custom-table {
+    border-collapse: collapse;
+}
+
+.custom-table th,
+.custom-table td {
+    padding: 8px;
+}
+
+.custom-table th {
+    border: none;
+}
+
+.custom-table td {
+    border-top: 1px solid #ddd;
+}
+
+.custom-table tbody tr:first-child td {
+    border-top: none;
+}

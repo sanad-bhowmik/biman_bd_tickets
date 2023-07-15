@@ -1,0 +1,11 @@
+.cancel{
+    color: grey;
+}
+.green{
+    background-color: #adfff1;
+    width: 100px;
+    padding-left: 5vh;
+    padding-right: 2vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
