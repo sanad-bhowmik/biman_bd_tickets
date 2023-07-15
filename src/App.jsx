@@ -28,7 +28,7 @@ function App() {
         <div style={{ display: 'flex' }}>
           <LeftNav />
           <MiddleNav departureAirport={departureAirport} arrivalAirport={arrivalAirport} onAirportChange={handleAirportChange} />
-          <div style={{ backgroundColor: 'white', zIndex: 1, marginLeft: '44vh', width: '150vh', paddingLeft: '10vh', paddingRight:'10vh' }}>
+          <div style={{ backgroundColor: 'white', zIndex: 1, marginLeft: '48vh', width: '150vh', paddingLeft: '10vh', paddingRight:'10vh' }}>
             <RightNav onFlightDetailsClick={handleFlightDetailsClick} />
           </div>
         </div>
