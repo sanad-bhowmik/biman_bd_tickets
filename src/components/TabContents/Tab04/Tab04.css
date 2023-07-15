@@ -1,0 +1,11 @@
+@media (max-width: 768px) {
+    .custom-table {
+      width: 100%;
+    }
+  
+    .custom-table tr th,
+    .custom-table tr td {
+      width: auto;
+    }
+  }
+  

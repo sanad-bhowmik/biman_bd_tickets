@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from '@mui/material';
-
+import './RightNav.css'
 const RightNav = ({ onFlightDetailsClick }) => {
   return (
     <div>

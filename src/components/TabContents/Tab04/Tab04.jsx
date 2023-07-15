@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './Tab04.css'
 const Tab04 = () => {
     return (
         <div style={{ paddingBottom: '40px', color: '#4D4D4D' }}>

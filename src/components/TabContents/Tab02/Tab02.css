@@ -18,3 +18,21 @@
 .custom-table tbody tr:first-child td {
     border-top: none;
 }
+@media (max-width: 768px) {
+    .custom-table {
+      width: 100%;
+    }
+  
+    .custom-table tr th,
+    .custom-table tr td {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+  
+    .custom-table tr th:first-child,
+    .custom-table tr td:first-child {
+      text-align: left;
+    }
+  }
+  

@@ -1,0 +1,19 @@
+@media (max-width: 768px) {
+    Tabs {
+      flex-wrap: wrap;
+    }
+  
+    Tab {
+      margin-bottom: 10px;
+    }
+  
+    div[style*='marginLeft:1vh;'] {
+      margin-left: 0;
+    }
+  
+    div[style*='marginRight:12vh;'] {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+  

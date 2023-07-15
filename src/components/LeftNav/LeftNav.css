@@ -1,64 +1,252 @@
 .container {
-    text-align: center;
+  text-align: center;
+}
+
+.stepper-wrapper {
+  /* margin: 50px auto; */
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  gap: 40px;
+}
+
+.stepper-wrapper::before {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: #d2d2d2;
+  /* Updated color */
+  position: absolute;
+  z-index: -2;
+}
+
+.progress {
+  content: "";
+  width: 0%;
+  height: 3px;
+  background-color: rgb(78, 196, 243);
+  position: absolute;
+  z-index: -1;
+  transition: width 1s;
+}
+
+.screen-indicator {
+  border-radius: 50%;
+  border: 3px solid;
+  /* Updated color */
+  background-color: #d2d2d2;
+  padding: 5px 5px;
+  color: #d2d2d2;
+  transition: border-color color;
+  transition-duration: 0.7s;
+}
+
+.completed {
+  background-color: rgb(0, 223, 162);
+  color: rgb(0, 223, 162);
+}
+
+.control-btn {
+  background-color: rgb(238, 238, 238);
+  padding: 5px 10px;
+  border: 1px solid rgb(0, 223, 162);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.control-btn:disabled {
+  cursor: not-allowed;
+}
+
+.control-btn:not(:disabled):hover {
+  background-color: lightgray;
+}
+
+.Stepper {
+  position: relative;
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.Stepper__step {
+  position: relative;
+  display: table-cell;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.Stepper__indicator {
+  position: relative;
+  display: block;
+  z-index: 2;
+}
+
+.Stepper__label {
+  position: relative;
+  display: block;
+  margin: 0.5rem 0;
+  color: #333333;
+  z-index: 2;
+}
+
+.Stepper__info {
+  position: relative;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #38C59D;
+  border-radius: 50%;
+  background-color: #38C59D;
+  font-size: 1.25rem;
+  line-height: 2.5rem;
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+}
+
+.Stepper__panel {
+  display: none;
+}
+
+.Stepper .Stepper__step:after {
+  content: " ";
+  position: absolute;
+  left: 50%;
+  top: 15px;
+  width: 300%;
+  height: 0.125rem;
+  background-color: gray;
+  z-index: 1;
+}
+.minitue{
+  z-index: 1;
+}
+.Stepper .Stepper__step:last-child:after {
+  display: none;
+}
+
+.Stepper--inline .Stepper__indicator,
+.Stepper--inline .Stepper__label {
+  display: inline-block;
+  vertical-align: inherit;
+}
+
+.Stepper--inline .Stepper__label {
+  text-align: left;
+  padding: 0 0.5rem;
+  background: #fff;
+}
+
+.Stepper--inline.Stepper--bottom .Stepper__label {
+  vertical-align: middle;
+}
+
+.Stepper--inline.Stepper--bottom .Stepper__step:after {
+  top: auto;
+  bottom: 1.75rem;
+}
+
+
+.Stepper--vertical .Stepper__step {
+  display: block;
+  text-align: left;
+}
+
+.Stepper--vertical .Stepper__label {
+  padding-left: 1rem;
+}
+
+.Stepper--vertical .Stepper__indicator,
+.Stepper--vertical .Stepper__label {
+  display: table-cell;
+}
+
+.Stepper--vertical .Stepper__panel {
+  margin-left: 3.5rem;
+}
+
+
+.Stepper--vertical .Stepper__step:after {
+  content: " ";
+  position: absolute;
+  left: 1.75rem;
+  top: 2.5rem;
+  bottom: -0.5rem;
+  width: 0;
+  height: auto;
+  border-left: 0.125rem solid #e3e8ec;
+}
+
+.Stepper .Stepper__step.is-complete .Stepper__info {
+  border-color: #a6b6c3;
+  background-color: #a6b6c3;
+}
+
+.Stepper .Stepper__step.is-complete .Stepper__label {
+  color: #a6b6c3;
+}
+
+.Stepper .Stepper__step.is-active .Stepper__info {
+  border-color: #627c90;
+  background-color: #627c90;
+}
+
+.Stepper .Stepper__step.is-active .Stepper__label {
+  color: #627c90;
+}
+
+.Stepper .Stepper__step.is-warning .Stepper__info {
+  border-color: #f1c40f;
+  background-color: #f1c40f;
+}
+
+.Stepper .Stepper__step.is-warning .Stepper__label {
+  color: #f1c40f;
+}
+
+.Stepper .Stepper__step.is-error .Stepper__info {
+  border-color: #e95a4b;
+  background-color: #e95a4b;
+}
+
+.Stepper .Stepper__step.is-error .Stepper__label {
+  color: #e95a4b;
+}
+
+.Container {
+  position: relative;
+
+  margin: 0 auto;
+  background: #fafafa;
+}
+
+.Container+.Container {
+  margin-top: 0.5rem;
+}
+
+svg {
+  vertical-align: middle;
+}
+@media (max-width: 768px) {
+  .leftNavContainer {
+    padding: 10px;
   }
-  
-  .stepper-wrapper {
-    /* margin: 50px auto; */
-    width: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    gap: 40px;
+
+  .title {
+    font-size: 16px;
   }
-  
-  .stepper-wrapper::before {
-    content: "";
-    width: 100%;
-    height: 3px;
-    background-color: #d2d2d2; /* Updated color */
-    position: absolute;
-    z-index: -2;
+
+  .flightCode {
+    font-size: 12px;
   }
-  
-  .progress {
-    content: "";
-    width: 0%;
-    height: 3px;
-    background-color: rgb(78, 196, 243);
-    position: absolute;
-    z-index: -1;
-    transition: width 1s;
+
+  .duration,
+  .stops {
+    font-size: 12px;
+    margin-top: 5px;
   }
-  
-  .screen-indicator {
-    border-radius: 50%;
-    border: 3px solid ; /* Updated color */
-    background-color: #d2d2d2;
-    padding: 5px 5px;
-    color: #d2d2d2;
-    transition: border-color color;
-    transition-duration: 0.7s;
-  }
-  
-  .completed {
-   background-color: rgb(0, 223, 162);
-    color: rgb(0, 223, 162);
-  }
-  
-  .control-btn {
-    background-color: rgb(238, 238, 238);
-    padding: 5px 10px;
-    border: 1px solid rgb(0, 223, 162);
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .control-btn:disabled {
-    cursor: not-allowed;
-  }
-  
-  .control-btn:not(:disabled):hover {
-    background-color: lightgray;
-  }
-  
+}

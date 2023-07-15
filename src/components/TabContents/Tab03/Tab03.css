@@ -9,3 +9,15 @@
     padding-top: 1vh;
     padding-bottom: 1vh;
 }
+.cancel {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  @media (max-width: 768px) {
+    .cancel {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  

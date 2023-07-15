@@ -1,0 +1,14 @@
+@media (max-width: 768px) {
+    div {
+      text-align: center;
+    }
+  
+    h1 {
+      font-size: 4vh;
+    }
+  
+    Button {
+      margin: 20px 0;
+    }
+  }
+  
